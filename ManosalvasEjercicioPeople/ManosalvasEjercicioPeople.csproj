@@ -61,6 +61,13 @@
 
 	<ItemGroup>
 	  <Compile Remove="Models\Note.cs" />
+	  <Compile Remove="Resources\Colors.xaml.cs" />
+	  <Compile Remove="Resources\Styles.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="Resources\Colors.xaml" />
+	  <MauiXaml Remove="Resources\Styles.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>

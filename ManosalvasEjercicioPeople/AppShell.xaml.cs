@@ -1,4 +1,6 @@
 ﻿using ManosalvasEjercicioPeople.Models;
+using ManosalvasEjercicioPeople;
+
 
 
 namespace People;
