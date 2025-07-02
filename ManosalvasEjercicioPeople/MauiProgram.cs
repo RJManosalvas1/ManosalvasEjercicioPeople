@@ -1,6 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using ManosalvasEjercicioPeople;
+using ManosalvasEjercicioPeople.Models;
 
-namespace ManosalvasEjercicioPeople;
+using Microsoft.Extensions.Logging;
+
+namespace People;
 
 public static class MauiProgram
 {
@@ -19,6 +22,10 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		return builder.Build();
+        string dbPath = FileAccessHelper.GetLocalFilePath("people.db3");
+        builder.Services.AddSingleton<PersonRepository>(s => ActivatorUtilities.CreateInstance<PersonRepository>(s, dbPath));
+
+
+        return builder.Build();
 	}
 }
